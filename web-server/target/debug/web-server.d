@@ -1,0 +1,1 @@
+C:\Users\alexb\Desktop\Projects\Devops\auto-infra-release\web-server\target\debug\web-server.exe: C:\Users\alexb\Desktop\Projects\Devops\auto-infra-release\web-server\src\main.rs C:\Users\alexb\Desktop\Projects\Devops\auto-infra-release\web-server\static\form.html C:\Users\alexb\Desktop\Projects\Devops\auto-infra-release\web-server\static\index.html
