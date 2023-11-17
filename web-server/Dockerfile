@@ -1,6 +1,6 @@
 # Stage 1: Build the application
 # Use the Rust official image
-FROM rust:1.62 as builder
+FROM rust:latest as builder
 
 # Create a new empty shell project
 RUN USER=root cargo new --bin web-server
@@ -23,7 +23,8 @@ RUN rm ./target/release/deps/web_server*
 RUN cargo build --release
 
 # Stage 2: Setup the runtime environment
-FROM debian:buster-slim
+# Use the same Rust image for runtime
+FROM rust:latest
 
 # Copy the build artifact from the builder stage and set permissions
 COPY --from=builder /web-server/target/release/web-server .
